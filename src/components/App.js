@@ -19,8 +19,8 @@ export default class App extends Component {
   handleOnClick = (id) => {
     // Debugging
     // console.log(id);
-    fetch(`http://pokeapi.co/api/v2/pokemon/${id}/`)
-      .then(response => response.json())
+    fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
+      .then(res => res.json())
       .then(data => {
         const pokemon = new Pokemon(data);
 
@@ -28,7 +28,7 @@ export default class App extends Component {
         console.log(pokemon);
         this.setState({ pokemon });
       })
-      .catch(error => console.log(error));
+      .catch(err => console.log(err));
   }
 
   render() {
