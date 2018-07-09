@@ -2,12 +2,14 @@ import React from 'react';
 import './styles/DetailView.css';
 
 const DetailView = () => {
+    const {id, name, sprite, type } = pokemon;
+
     return (
         <section className="detail__section">
-            <img className="detail__sprite-image" />
+            <img src={sprite} className="detail__sprite-image" alt="sprite" />
             <div className="detail__data-wrapper">
-                <h1 className="detail__data-name"></h1>
-                <p className="detail__data-char"></p>
+                <h1 className="detail__data-name">ID: {id} {name}</h1>
+                <p className="detail__data-char">Type: {type}</p>
             </div>
         </section>
     );
