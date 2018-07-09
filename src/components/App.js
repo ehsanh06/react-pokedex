@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import './styles/App.css';
-
+import DetailView from './DetailView';
 import PokeList from './PokeList';
+
+import './styles/App.css';
 
 export default class App extends Component {
 
@@ -14,6 +15,7 @@ export default class App extends Component {
     return (
       <div className="App">
         <PokeList />
+        <DetailView />
       </div>
     );
   }
